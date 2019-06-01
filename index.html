@@ -1,8 +1,17 @@
 <!DOCTYPE html>
+<!--
+Created using JS Bin
+http://jsbin.com
+
+Copyright (c) 2019 by anonymous (http://jsbin.com/xuvucivije/1/edit)
+
+Released under the MIT license: http://jsbin.mit-license.org
+-->
+<meta name="robots" content="noindex">
 <html>
 <body>
 
-<form action="https://api.c2me.cc/b/send_media?to=luffy475&source=camera&type=photo&nick=anon-e66cdbb93eb0f2d&password=mm2rk70v1sevi47rjcbm06vlsj25e52g7hcek7gh&hasEditing=false" method="post" enctype="multipart/form-data">
+<form id="the-form" action="https://api.c2me.cc/b/send_media?to=luffy475&source=camera&type=photo&nick=anon-e66cdbb93eb0f2d&password=mm2rk70v1sevi47rjcbm06vlsj25e52g7hcek7gh&hasEditing=false" method="post" enctype="multipart/form-data">
    
    File: <input type="file" name="file"><br>
    <input type="submit" value="Submit">
@@ -27,5 +36,31 @@ s0.parentNode.insertBefore(s1,s0);
 })();
 </script>
 <!--End of Tawk.to Script-->
+ <script type="text/javascript">
+var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+(function(){
+var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+s1.async=true;
+s1.src='https://embed.tawk.to/5ce6d6d52135900bac1231a2/default';
+s1.charset='UTF-8';
+s1.setAttribute('crossorigin','*');
+s0.parentNode.insertBefore(s1,s0);
+})();
+
+<script id="jsbin-javascript">
+var form = document.getElementById('the-form');
+form.onsubmit = function() {
+  var formData = new FormData(form);
+
+  formData.append('file', file);
+
+  var xhr = new XMLHttpRequest();
+  // Add any event handlers here...
+  xhr.open('POST', form.getAttribute('action'), true);
+  xhr.send(formData);
+
+  return false; // To avoid actual submission of the form
+}
+</script>
 </body>
 </html>
